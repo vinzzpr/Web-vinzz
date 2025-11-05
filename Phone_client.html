@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VZC1 — Phone Client</title>
+  <link rel="stylesheet" href="css/cyber.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="h1">VZC1 — Phone Receiver</div>
+      <p class="lead">Buka halaman ini pada HP target. Tekan tombol izin agar senter & audio dapat dikontrol.</p>
+
+      <div style="margin-top:12px">
+        <button id="grantBtn" class="btn">Minta Izin Kamera & Audio</button>
+      </div>
+
+      <div style="margin-top:12px" id="phoneStatus">
+        <span class="status-dot" id="phoneDot"></span>
+        <span id="phoneText" class="small-muted">Not connected to server</span>
+      </div>
+
+      <div style="margin-top:12px" class="small-muted">Biarkan tab tetap terbuka.</div>
+    </div>
+  </div>
+
+  <audio id="bgAudio" src="assets/audio.mp4" preload="auto"></audio>
+
+  <script src="js/common.js"></script>
+  <script src="js/phone_client.js"></script>
+</body>
+</html>

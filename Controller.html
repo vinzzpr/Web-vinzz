@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VZC1 — Controller</title>
+  <link rel="stylesheet" href="css/cyber.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="h1">VZC1 Controller</div>
+      <p class="lead">Masukkan alamat server (relay) atau biarkan kosong untuk connect ke server yang melayani halaman ini.</p>
+
+      <div style="display:flex;gap:10px;align-items:center;margin-top:12px">
+        <input id="serverInput" class="input" placeholder="ws://your-server:8080  atau kosong = this host" />
+        <button id="connectBtn" class="btn">Connect</button>
+      </div>
+
+      <div style="margin-top:12px" id="statusLine">
+        <span id="statusDot" class="status-dot"></span>
+        <span id="statusText" class="small-muted">Not connected</span>
+      </div>
+
+      <div id="controlArea" style="display:none;margin-top:16px">
+        <div class="controls">
+          <button class="control-btn" id="btnSenter">SENTER</button>
+          <button class="control-btn" id="btnGetar">GETAR</button>
+          <button class="control-btn" id="btnMusik">MUSIK</button>
+        </div>
+
+        <div style="margin-top:12px" class="small-muted">Jika WS tidak bisa, controller juga dapat gunakan HTTP POST ke <code>http://SERVER_IP:PORT/cmd</code>.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/controller.js"></script>
+</body>
+</html>
